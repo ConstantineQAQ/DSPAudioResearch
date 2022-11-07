@@ -2,7 +2,7 @@ clc;
 clear;
 close all;
 
-filename='G:\MATLAB2021a\final\wyn\jiuwangleba.wav';
+filename='G:\MATLAB2021a\wyn\jiuwangleba.wav';
 [info,Fs]=audioread(filename);
 disp(Fs);
 

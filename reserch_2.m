@@ -11,7 +11,7 @@ recordblocking(recorderObj, recordt);
 info = getaudiodata(recorderObj);
 N=length(info);
 disp('录音结束.');
-filename = 'G:\MATLAB2021a\final\wyn\ceshi.wav';
+filename = 'G:\MATLAB2021a\wyn\ceshi.wav';
 audiowrite(filename,info,Fs);
 fft_infor = abs(fft(info));
 fft_infor = fft_infor./max(fft_infor);
