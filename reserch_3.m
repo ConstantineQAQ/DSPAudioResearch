@@ -11,7 +11,7 @@ sound(info,fs);
 n=length(info);
 y_f=fft(info,n);
 f=fs*(0:n/2-1)/n;
-disp('按任何按键显示图形');
+disp('按任何按键显示加噪前图形');
 pause;
 subplot 211;plot(info,'red');xlabel('时间s');ylabel('幅值 ');title('加噪前的时域波形');
 subplot 212;plot(f,abs(y_f(1:n/2)));xlabel('频率Hz');ylabel('频率幅值');title('加噪前的频谱图');
@@ -43,7 +43,7 @@ M=50;                                       % 设置Ｍ和mu
 mu=0.000001;
 [y,W,e]=LMS(info_noise,info,M,mu,itr);
 output=e/max(abs(e));                 	% LMS滤波输出
-disp('按任何按键播放加噪前声音')
+disp('按任何按键播放去除噪声后声音')
 pause;
 sound(output,fs);
 % 作图
