@@ -3,7 +3,7 @@ clear;
 close all;
 
 Fs = input('请输入采样频率:');
-recordt=input('请输入录制时间');
+recordt=input('请输入录制时间:');
 disp('按任意键开始录音');
 pause;
 recorderObj = audiorecorder(Fs,16,1);
